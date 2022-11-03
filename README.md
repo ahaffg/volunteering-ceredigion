@@ -30,8 +30,24 @@ The website will also provide information about former successful candidates to 
 - Users want to be able to see new opportunities.
 - Users want to be able to get in contact with ‘Gofalu am Geredigion | Caring for Ceredigion’ easily if they have new opportunities, experiences to report or further questions about opportunities.
 ### Future Development
-- By law all government funded projects must be billingual so this option would be offered.
+- By law, all government funded projects must be billingual so this option would need to be offered.
 
 ## Features
 ### Clean structure
-The website is designed to give the user a great experience and to be user-friendly on all types of devices. There will be no difference in the experience users have when on a mobile compared to a laptop!
+The website is designed to give the user a great experience and to be user-friendly on all types of devices. There will be no difference in the experience users have when on a mobile compared to a laptop. The front-end code will utilize a combination of Materialize themes and elements to achieve this.
+
+### Logo
+The logo has been made through adapting Fontawesome Icons that will then be used throughout the site to denote the different catagories of voluntary oppertunities.
+
+### Hero Image
+The hero image will utilize the zoom animation from the 'Love Running' project and the colors have inspired the color palette.
+
+### Color Palette
+The colours were sampled in Gimp and then fine-tuned using Coolors. The feel is fresh, spring like and intended to be very easy to read.
+
+## Wireframes
+### Home Page
+### Oppertunities Page
+#### Cards
+### Experiences Page
+### Contact Page
