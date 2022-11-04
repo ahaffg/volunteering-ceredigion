@@ -11,15 +11,27 @@ Users to the site will be able to view a board of live opportunities and apply f
 The website will also provide information about former successful candidates to various schemes and will detail their experiences.
 
 ## Table of contents
-- Website owner business goals
-- User goals
-- Features
-- Technology
-- Testing
-- Deployment
-- Credits
++ [UX](#ux "UX")
+  + [All user goals](#all-user-goals "All user goals")
+  + [Returning user goals](#returning-user-goals "Returning user goals")
+  + [Future Development](#future-development "Future Development")
++ [Features](#features "Features")
+  + [Clean structure](#clean-structure "Clean structure")
+  + [Logo](#logo "Logo")
+  + [Hero Image](#hero-image "Hero Image")
+  + [Color Palette](#color-palette "Color Palette")
++ [Wireframes](#Wireframes "Wireframes")
+  + [Home Page](#home-page "Home Page")
+  + [Oppertunities Page](#oppertunities-page "Oppertunities Page")
+    + [Cards](#cards "Cards")
+  + [Experiences Page](#experiences-page "Experiences Page")
+  + [Contact Page](#contact-page "Contact Page")
++ [Technology](#technology "Technology")
++ [Testing](#testing "Testing")
++ [Deployment](#deployment "Deployment")
++ [Credits](#Credits "Credits")
 
-## User goals
+## UX
 ### All user goals
 - Users want to be able to view and apply for volunteering opportunities.
 - Users want to be able to create an account to manage their applications. 
