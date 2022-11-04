@@ -22,7 +22,7 @@ The website will also provide information about former successful candidates to 
   + [Color Palette](#color-palette "Color Palette")
 + [Wireframes](#Wireframes "Wireframes")
   + [Home Page](#home-page "Home Page")
-  + [Oppertunities Page](#oppertunities-page "Oppertunities Page")
+  + [Opportunities Page](#opportunities-page "Opportunities Page")
     + [Cards](#cards "Cards")
   + [Experiences Page](#experiences-page "Experiences Page")
   + [Contact Page](#contact-page "Contact Page")
@@ -46,20 +46,31 @@ The website will also provide information about former successful candidates to 
 
 ## Features
 ### Clean structure
-The website is designed to give the user a great experience and to be user-friendly on all types of devices. There will be no difference in the experience users have when on a mobile compared to a laptop. The front-end code will utilize a combination of Materialize themes and elements to achieve this.
+The website is designed to give the user a great experience and to be user-friendly on all types of devices. There will be no difference in the experience users have when on a mobile compared to a laptop. The front-end code will utilize a combination of [Materialize](https://materializecss.com/) themes and elements to achieve this.
+![Templates](/images/readme/templates.jpg)
 
 ### Logo
 The logo has been made through adapting Fontawesome Icons that will then be used throughout the site to denote the different catagories of voluntary oppertunities.
 
+![Logo](/images/readme/GagLogo.png)
+![Icons](/images/readme/fontawesome.jpg)
+
 ### Hero Image
-The hero image will utilize the zoom animation from the 'Love Running' project and the colors have inspired the color palette.
+The [hero image](https://www.cardigan-bay.com/cbay/wp-content/uploads/coast-path.jpg) will utilize the zoom animation from the 'Love Running' project and the colors have inspired the color palette.
+![Hero Image](/images/readme/Cardigan-Bay-featured.jpg)
 
 ### Color Palette
 The colours were sampled in Gimp and then fine-tuned using Coolors. The feel is fresh, spring like and intended to be very easy to read.
-
+![Color Palette](/images/readme/palette.jpg)
 ## Wireframes
 ### Home Page
-### Oppertunities Page
+The home or landing page will welcome visitors and volunteers and give a brief description of whet the website does, and invite them to take a look at the volunteering oppertunities on offer. There will be a navbar that will appear across all pages, a hero image with the zoom animation from the ['Love Runing Project'](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+CSE101+2020_Q2/courseware/be0e510a3aca4bccb6e0bba4cf7cf06b/15fe9d557bcc4af5a117465b9150454f/) and introductory paragraphs about the three catagorys of opportuities available, utilisint the Fontawesome icons. 
+![Home Page](/images/readme/landingPageWireframe.png)
+### Opportunities Page
+The opportunities page has been inspired by the [Code Institute waltkthrough project]()
+![Oppertunities Page](/images/readme/opportunitiesPageWireframe.png)
 #### Cards
 ### Experiences Page
+![Experiences Page](/images/readme/testimonialsPageWireframe.png)
 ### Contact Page
+![Contact Page](/images/readme/contactPageWireframe.png)
