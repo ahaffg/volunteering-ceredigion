@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2> I'm extending the base contet! </h2>
     {% for opportunity in opportunities %}
         {{ opportunity.category_type }} <br>
         {{ opportunity.title }} <br>
