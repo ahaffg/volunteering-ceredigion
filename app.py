@@ -22,11 +22,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_opportunities")
 def get_opportunities():
-    opportunities = list(mongo.db.opportunities.find())
-    opportunity = mongo.db.opportunities.find_one()
-    print(opportunities)
-    print(opportunity)
-    return render_template("opportunities.html", opportunities=opportunities, opportunity=opportunity)
+    opportunities = mongo.db.opportunities.find()
+    return render_template("opportunities.html", opportunities=opportunities)
 
 
 if __name__ == "__main__":

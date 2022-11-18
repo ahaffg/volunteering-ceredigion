@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opportunities</title>
-</head>
-<body>
-    {% for opportunity in opportunities %}
-        {{ opportunity.category_name }} <br>
-        {{ opportunity.opportunity_name }} <br>
-        {{ opportunity.institution }} <br>
-        {{ opportunity.opportunity_description }} <br>
-        {{ opportunity.welsh_required }} <br>
-        {{ opportunity.application_deadline }}
-    {% endfor %}
+{% extends "base.html" %}
+{% block content %}
 
-    <p> hello world!</p>
-    
-</body>
-</html>
+<h2> I'm extending the base contet! </h2>
+    {% for opportunity in opportunities %}
+        {{ opportunity.category_type }} <br>
+        {{ opportunity.title }} <br>
+        {{ opportunity.institution }} <br>
+        {{ opportunity.description }} <br>
+        {{ opportunity.welsh_needed }} <br>
+        {{ opportunity.application_due }}
+    {% endfor %}
+{% endblock %}
