@@ -7,13 +7,16 @@
     <title>Opportunities</title>
 </head>
 <body>
-    {% for opportunities in opportunities %}
-        {{ opportunities.category_name }} <br>
-        {{ opportunities.opportunity_name }} <br>
-        {{ opportunities.institution }} <br>
-        {{ opportunities.opportunity_description }} <br>
-        {{ opportunities.welsh_required }} <br>
-        {{ opportunities.application_deadline }}
+    {% for opportunity in opportunities %}
+        {{ opportunity.category_name }} <br>
+        {{ opportunity.opportunity_name }} <br>
+        {{ opportunity.institution }} <br>
+        {{ opportunity.opportunity_description }} <br>
+        {{ opportunity.welsh_required }} <br>
+        {{ opportunity.application_deadline }}
     {% endfor %}
+
+    <p> hello world!</p>
+    
 </body>
 </html>
