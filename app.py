@@ -20,8 +20,8 @@ mongo = PyMongo(app)
 
 @app.route("/")
 @app.route("/get_opportunities")
-def get_oppertunities():
-    opportunities = mongo.opportunities.tasks.find()
+def get_opportunities():
+    opportunities = mongo.gofaluAmGeredigionDB.opportunities.find()
     return render_template("opportunities.html", opportunities=opportunities)
 
 
