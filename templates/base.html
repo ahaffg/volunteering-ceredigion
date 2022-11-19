@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Parallax Template - Materialize</title>
+    
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,7 +13,7 @@
     <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link rel="stylesheet" href="{{ url_for('static', filename='static/css/style.css') }}" type="text/css">
-  <title>Volunteering Ceredigion</title>
+  <title>Gofalu am Geredigion | Caring for Ceredigion</title>
 </head>
 <body>
 
@@ -23,15 +23,29 @@
 <header>  
     <nav class="light-blue darken-4 nav-extended text-shadow" role="navigation">
       <div class="nav-wrapper container">
-          <a id="logo-container" href="#" class="brand-logo white-text">GaG | CfC</a>
+          <a id="logo-container" href="{{ url_for('get_opportunities') }}" class="brand-logo white-text">GaG | CfC</a>
           <ul class="right hide-on-med-and-down">
-              <li><a class="white-text" href="#">Navbar Link</a></li>
+              <li><a class="white-text" href="{{ url_for('get_opportunities') }}">Home</a></li>
+              <li><a class="white-text" href="#">Profile</a></li>
+              <li><a class="white-text" href="#">New Opportunity</a></li>
+              <li><a class="white-text" href="#">Opportuities</a></li>
+              <li><a class="white-text" href="#">Log Out</a></li>
+              <li><a class="white-text" href="#">Log In</a></li>
+              <li><a class="white-text" href="#">Register</a></li>
           </ul>
 <!-- mobile nav bar -->
           <ul id="nav-mobile" class="sidenav">
               <li class="white-text"><a href="#">Navbar Link</a></li>
-          </ul>
+          
           <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <li><a class="white-text" href="{{ url_for('get_opportunities') }}"></a>Home</a></li>
+              <li><a class="white-text" href="#">Profile</a></li>
+              <li><a class="white-text" href="#">New Opportunity</a></li>
+              <li><a class="white-text" href="#">Opportuities</a></li>
+              <li><a class="white-text" href="#">Log Out</a></li>
+              <li><a class="white-text" href="#">Log In</a></li>
+              <li><a class="white-text" href="#">Register</a></li>
+            </ul>
       </div>
   </nav>
 </header>
