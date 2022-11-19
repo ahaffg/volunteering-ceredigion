@@ -13,9 +13,6 @@
   <title>Gofalu am Geredigion | Caring for Ceredigion</title>
 </head>
 <body>
-
-{% block styles %}
-{% endblock %}
 <!-- nav bar -->    
 <header>  
     <nav class="light-blue darken-4 nav-extended text-shadow" role="navigation">
@@ -46,16 +43,14 @@
       </div>
   </nav>
 </header>
-
   <div id="index-banner" class="parallax-container">
       <div class="section no-pad-bot">
           <div class="container">
               <br><br>
-              <h1 class="header center teal-text text-lighten-2">Gofalu am Geredigion<br><hr>
+              <h1 class="header center white-text">Gofalu am Geredigion<br><hr>
               Caring for Ceredigion</h1>
               <div class="row center">
-                  <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design
-                  </h5>
+                  <h5 class="header col s12 light">Your hub for volunteering opportunities in Ceredigion.</h5>
               </div>
               <div class="row center">
                 <img id="logo" href="/images/readme/GagLogo.png" alt="caring for ceredigion logo">
@@ -66,13 +61,22 @@
       </div>
       <div class="parallax"><img src="/images/readme/Cardigan-Bay-featured.jpg" alt="cardigan bay coasline"></div>
   </div>
+<!-- welcome message -->
+<div class="container">
+    <div class="section">
 
-
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>Croeso | Welcome</h4>
+                <p class="left-align light">We're so glad you're here! This is your online hub to find out about voluntary opportunities in Ceredigion. Wether you want to make new friends, give back to the community or built relevant experience for your CV or firld of study, chances are, we can match you with an organisation or charity that would love to hear from you! So take a look around and begin your volunteering journey today!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--   Icon Section   -->
   <div class="container">
-      <div class="section">
- {% block content %}
-    {% endblock %}
-          <!--   Icon Section   -->
+      <div class="section">     
           <div class="row">
               <div class="col s12 m4">
                   <div class="icon-block">
@@ -101,7 +105,7 @@
                       <h2 class="center blue-text text-darken-4"><i class="material-icons">pets</i></h2>
                       <h5 class="center">Animals</h5>
 
-                      <p class="light">Do you cansider yourself a Dr Dolittle? Do you have an affinity with animals? Charities and institutions like Cats Protection League, Ystwyth Vets and RSPA Ceredigion branch are in great need of kind, patient and reliable volunteers to help them with the miriad of animals in their care. If you think you can help check out out opportunities by clicking the button below</p>
+                      <p class="light">Do you consider yourself a Dr Dolittle? Do you have an affinity with animals? Charities and institutions like Cats Protection League, Ystwyth Vets and RSPA Ceredigion branch are in great need of kind, patient and reliable volunteers to help them with the miriad of animals in their care. If you think you can help check out out opportunities by clicking the button below</p>
                       <a href="http://materializecss.com/getting-started.html" id="download-button"
                       class="btn-large waves-effect waves-light blue darken-4 ">Get Started</a>
                   </div>
@@ -110,8 +114,7 @@
 
       </div>
   </div>
-
-
+<!-- banner -->
   <div class="parallax-container valign-wrapper">
       <div class="section no-pad-bot">
           <div class="container">
@@ -121,31 +124,22 @@
               </div>
           </div>
       </div>
-      <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+      <div class="parallax"><img src="/images/readme/Cardigan-Bay-featured.jpg" alt="cardigan bay coast"></div>
   </div>
+<!-- Section -->
+<div class="container">
+    <div class="section">
 
-  <div class="container">
-      <div class="section">
-
-          <div class="row">
-              <div class="col s12 center">
-                  <h3><i class="mdi-content-send brown-text"></i></h3>
-                  <h4>Contact Us</h4>
-                  <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                      scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna
-                      fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra
-                      ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam
-                      eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi
-                      massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non
-                      tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                      Curae;</p>
-              </div>
-          </div>
-
-      </div>
-  </div>
-
-
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>Croeso | Welcome</h4>
+                <p class="left-align light">We're so glad you're here! This is your online hub to find out about voluntary opportunities in Ceredigion. Wether you want to make new friends, give back to the community or built relevant experience for your CV or firld of study, chances are, we can match you with an organisation or charity that would love to hear from you! So take a look around and begin your volunteering journey today!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- banner -->
   <div class="parallax-container valign-wrapper">
       <div class="section no-pad-bot">
           <div class="container">
@@ -155,9 +149,9 @@
               </div>
           </div>
       </div>
-      <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+      <div class="parallax"><img src="/images/readme/Cardigan-Bay-featured.jpg" alt="cardigan bay coast"></div>
   </div>
-
+<!-- footer -->
   <footer class="page-footer teal">
       <div class="container">
           <div class="row">
@@ -166,8 +160,6 @@
                   <p class="grey-text text-lighten-4">We are a team of college students working on this project like
                       it's our full time job. Any amount would help support and continue development on this project
                       and is greatly appreciated.</p>
-
-
               </div>
               <div class="col l3 s12">
                   <h5 class="white-text">Settings</h5>
@@ -202,7 +194,6 @@
   <script src="static/js/materialize.js"></script>
   <script src="static/js/init.js"></script>
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-  {% block scripts %}
-  {% endblock %}
+
 </body>
 </html>
