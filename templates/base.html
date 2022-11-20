@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!--<link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />-->
     <link rel="stylesheet" href="{{ url_for('static', filename='static/css/style.css') }}" type="text/css">
   <title>Gofalu am Geredigion | Caring for Ceredigion</title>
 </head>
@@ -24,11 +24,11 @@
           <ul class="right hide-on-med-and-down">
               <li><a class="white-text" href="{{ url_for('get_opportunities') }}">Home</a></li>
               <li><a class="white-text" href="#">Profile</a></li>
-              <li><a class="white-text" href="#">New Opportunity</a></li>
+              <li><a class="white-text" href="{{ url_for('get_opportunities') }}">New Opportunity</a></li>
               <li><a class="white-text" href="#">Opportuities</a></li>
               <li><a class="white-text" href="#">Log Out</a></li>
               <li><a class="white-text" href="#">Log In</a></li>
-              <li><a class="white-text" href="#">Register</a></li>
+              <li><a class="white-text" href="{{ url_for('register') }}">Register</a></li>
           </ul>
 <!-- mobile nav bar -->
           <ul id="nav-mobile" class="sidenav">
@@ -37,126 +37,38 @@
           <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <li><a class="white-text" href="{{ url_for('get_opportunities') }}"></a>Home</a></li>
               <li><a class="white-text" href="#">Profile</a></li>
-              <li><a class="white-text" href="#">New Opportunity</a></li>
+              <li><a class="white-text" href="{{ url_for('get_opportunities') }}">New Opportunity</a></li>
               <li><a class="white-text" href="#">Opportuities</a></li>
               <li><a class="white-text" href="#">Log Out</a></li>
               <li><a class="white-text" href="#">Log In</a></li>
-              <li><a class="white-text" href="#">Register</a></li>
+              <li><a class="white-text" href="{{ url_for('register') }}">Register</a></li>
             </ul>
       </div>
   </nav>
 </header>
-
   <div id="index-banner" class="parallax-container">
       <div class="section no-pad-bot">
           <div class="container">
               <br><br>
-              <h1 class="header center teal-text text-lighten-2">Gofalu am Geredigion<br><hr>
+              <h1 class="header center white-text">Gofalu am Geredigion<br><hr>
               Caring for Ceredigion</h1>
               <div class="row center">
-                  <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design
-                  </h5>
+                  <h5 class="header col s12 light">Your hub for volunteering opportunities in Ceredigion.</h5>
               </div>
               <div class="row center">
-                <img id="logo" href="/images/readme/GagLogo.png" alt="caring for ceredigion logo">
+                <img id="logo" href="images/readme/GagLogo.png" alt="caring for ceredigion logo">
               </div>
               <br><br>
 
           </div>
       </div>
-      <div class="parallax"><img src="/images/readme/Cardigan-Bay-featured.jpg" alt="cardigan bay coasline"></div>
+      <div class="parallax"><img src="images/readme/Cardigan-Bay-featured.jpg" alt="cardigan bay coasline"></div>
   </div>
 
 
-  <div class="container">
-      <div class="section">
- {% block content %}
-    {% endblock %}
-          <!--   Icon Section   -->
-          <div class="row">
-              <div class="col s12 m4">
-                  <div class="icon-block">
-                      <h2 class="center blue-text text-darken-4"><i class="material-icons">local_florist</i></h2>
-                      <h5 class="center">Environment</h5>
-
-                      <p class="light">Do you care deeply about the environment? Would you like to keep the local area safe and accesable for the comminuity and wildlife? If so, we have teamed up with local organisations like Tir Coed, Surfers Against Sewage and Eco Soc and have many rewarding opportunities available for all ages and levels of ability, click below to see out latest opportunities.</p>
-                      <a href="http://materializecss.com/getting-started.html" id="download-button"
-                      class="btn-large waves-effect waves-light blue darken-4">Get Started</a>
-                  </div>
-              </div>
-
-              <div class="col s12 m4">
-                  <div class="icon-block">
-                      <h2 class="center blue-text text-darken-4"><i class="material-icons">group</i></h2>
-                      <h5 class="center">People</h5>
-
-                      <p class="light">Are you just good with people? Do you always seem to calm people or make them smile? Then organisations like Hafan Y Waun, Mudiad Meithrin and Mind would love to hear from you! No matter what your skills or specialities, theres bound to be an oppertunity where you can make a difference. Click below to see what will be a good fit for you! </p>
-                      <a href="http://materializecss.com/getting-started.html" id="download-button"
-                      class="btn-large waves-effect waves-light blue darken-4">Get Started</a>
-                  </div>
-              </div>
-
-              <div class="col s12 m4">
-                  <div class="icon-block">
-                      <h2 class="center blue-text text-darken-4"><i class="material-icons">pets</i></h2>
-                      <h5 class="center">Animals</h5>
-
-                      <p class="light">Do you cansider yourself a Dr Dolittle? Do you have an affinity with animals? Charities and institutions like Cats Protection League, Ystwyth Vets and RSPA Ceredigion branch are in great need of kind, patient and reliable volunteers to help them with the miriad of animals in their care. If you think you can help check out out opportunities by clicking the button below</p>
-                      <a href="http://materializecss.com/getting-started.html" id="download-button"
-                      class="btn-large waves-effect waves-light blue darken-4 ">Get Started</a>
-                  </div>
-              </div>
-          </div>
-
-      </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-          <div class="container">
-              <div class="row center">
-                  <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design
-                  </h5>
-              </div>
-          </div>
-      </div>
-      <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-      <div class="section">
-
-          <div class="row">
-              <div class="col s12 center">
-                  <h3><i class="mdi-content-send brown-text"></i></h3>
-                  <h4>Contact Us</h4>
-                  <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                      scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna
-                      fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra
-                      ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam
-                      eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi
-                      massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non
-                      tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                      Curae;</p>
-              </div>
-          </div>
-
-      </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-          <div class="container">
-              <div class="row center">
-                  <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design
-                  </h5>
-              </div>
-          </div>
-      </div>
-      <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
+{% block content %}
+{% endblock %}
+         
 
   <footer class="page-footer teal">
       <div class="container">
