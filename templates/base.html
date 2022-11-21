@@ -23,7 +23,7 @@
           <a id="logo-container" href="{{ url_for('get_opportunities') }}" class="brand-logo white-text">GaG | CfC</a>
           <ul class="right hide-on-med-and-down">
               <li><a class="white-text" href="{{ url_for('get_opportunities') }}">Home</a></li>
-              <li><a class="white-text" href="#">Profile</a></li>
+              <li><a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
               <li><a class="white-text" href="{{ url_for('get_opportunities') }}">New Opportunity</a></li>
               <li><a class="white-text" href="#">Opportuities</a></li>
               <li><a class="white-text" href="#">Log Out</a></li>
@@ -36,7 +36,7 @@
           
           <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <li><a class="white-text" href="{{ url_for('get_opportunities') }}"></a>Home</a></li>
-              <li><a class="white-text" href="#">Profile</a></li>
+              <li><a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
               <li><a class="white-text" href="{{ url_for('get_opportunities') }}">New Opportunity</a></li>
               <li><a class="white-text" href="#">Opportuities</a></li>
               <li><a class="white-text" href="#">Log Out</a></li>
