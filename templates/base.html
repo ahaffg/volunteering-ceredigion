@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <!--<link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='static/css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
   <title>Gofalu am Geredigion | Caring for Ceredigion</title>
 </head>
 <body>
 
 {% block styles %}
 {% endblock %}
+
 <!-- nav bar -->    
 <header>  
     <nav class="light-blue darken-4 nav-extended text-shadow" role="navigation">
@@ -64,12 +64,7 @@
       <div class="parallax"><img src="/images/readme/Cardigan-Bay-featured.jpg" alt="cardigan bay coastline"></div>
   </div>
 
-  <main class="container">
-    {% block content %}
-    {% endblock %}
-</main>
-
-<section>
+  <section>
     <!-- flash messages -->
     {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -82,7 +77,12 @@
     {% endwith %}
 </section>
 
-  <footer class="page-footer teal">
+<main class="container">
+    {% block content %}
+    {% endblock %}
+</main>
+
+  <footer class="page-footer blue darken-4">
       <div class="container">
           <div class="row">
               <div class="col l6 s12">
