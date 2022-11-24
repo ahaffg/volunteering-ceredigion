@@ -22,10 +22,10 @@
       <div class="nav-wrapper container">
           <a id="logo-container" href="{{ url_for('get_opportunities') }}" class="brand-logo white-text">GaG | CfC</a>
           <ul class="right hide-on-med-and-down">
-            {% if session.user %}
               <li><a class="white-text" href="{{ url_for('get_opportunities') }}">Home</a></li>
+              {% if session.user %}
               <li><a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-              <li><a class="white-text" href="#">New Opportunity</a></li>
+              <li><a class="white-text" href="{{ url_for('new_opportunity') }}">New Opportunity</a></li>
               <li><a class="white-text" href="{{ url_for('get_opportunities') }}">Opportuities</a></li>
               <li><a class="white-text" href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}  
@@ -41,7 +41,7 @@
           <li><a class="white-text" href="{{ url_for('get_opportunities') }}"></a>Home</a></li>
             {% if session.user %}
                 <li><a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a class="white-text" href="#">New Opportunity</a></li>
+                <li><a class="white-text" href="{{ url_for('new_opportunity') }}">New Opportunity</a></li>
                 <li><a class="white-text" href="{{ url_for('get_opportunities') }}">Opportuities</a></li>
                 <li><a class="white-text" href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
@@ -62,12 +62,12 @@
                   <h5 class="header col s12 light">Your hub for volunteering opportunities in Ceredigion.</h5>
               </div>
               <div class="row center">
-                <img id="logo" src="..readme/GagLogo.png" alt="caring for ceredigion logo">
+                <img id="logo" src="/images/readme/Cardigan-Bay-featured.jpg" alt="caring for ceredigion logo">
               </div>
               <br><br>
           </div>
       </div>
-      <div class="parallax"><img src="/images/readme/Cardigan-Bay-featured.jpg" alt="cardigan bay coastline"></div>
+      <div class="parallax"><img src="/images/readme/GagLogo.png" alt="cardigan bay coastline"></div>
   </div>
 
   <section>
