@@ -1,28 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for opportunity in opportunities %}
-        {{ opportunity.category_type }} <br>
-        {{ opportunity.title }} <br>
-        {{ opportunity.institution }} <br>
-        {{ opportunity.description }} <br>
-        {{ opportunity.welsh_needed }} <br>
-        {{ opportunity.application_due }}
-    {% endfor %}
-
     <ul class="collapsible">
+        {% for opportunity in opportunities %}
         <li>
-            <div class="collapsible-header white-text blue darken-4 text-shadow"><i class="fas fa-caret-down"></i>First</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ opportunity.category_type }} : {{ opportunity.title }}</strong>
+                
+            </div>
+            <div class="collapsible-body">
+                <strong>{{ opportunity.institution }}</strong>
+                <p>{{ opportunity.description }}</p>
+                {{ opportunity.application_due }}
+                {% if opportunity.is_welsh_needed == "off" %}
+                    <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
+                        data-position="right" data-tooltip="URGENT!"></i>
+                {% endif %}
+            </div>
         </li>
-        <li>
-            <div class="collapsible-header white-text blue darken-4 text-shadow"><i class="fas fa-caret-down"></i>Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header white-text blue darken-4 text-shadow"><i class="fas fa-caret-down"></i>Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}
