@@ -2,9 +2,9 @@
 {% block content %}
 
     <h3 class="light-blue-text text-darken-4 center-align">Add Opportunity</h3>
-
+    <!-- catagory selector -->
     <div class="row card-panel grey lighten-5">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12" method="POST" action="{{ url_for('add_opportunity') }}">
             <div class="row">
 				<div class="input-field col s12">
                     <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
@@ -20,6 +20,7 @@
 					<label for="category_name">Task Category</label>
 				</div>
 			</div>
+            <!-- opportunity title input -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
@@ -28,14 +29,25 @@
                     <label for="task_name">Opportunity Name</label>
                 </div>
             </div>
+            <!-- opportunity institution input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-location_city prefix light-blue-text text-darken-4"></i>
+                    <input id="institution" name="institution" minlength="5" maxlength="100"
+                        type="text" class="validate" required>
+                    <label for="institution">Institution</label>
+                </div>
+            </div>
+            <!-- opportunity description text area -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
                     <textarea id="description" name="description" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                        maxlength="500" class="materialize-textarea validate" required></textarea>
                     <label for="description">Opportunity Description</label>
                 </div>
             </div>
+            <!-- application due date, date picker -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
@@ -43,6 +55,7 @@
                     <label for="application_due">Application due date</label>
                 </div>
             </div>
+            <!-- is Welsh essential toggle? -->
 			<div class="row">
 				<div class="input-field col s12">
 					<div class="switch">
@@ -55,6 +68,13 @@
 					</div>
 				</div>
 			</div>
+         <!-- submit button -->
+         <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                Add Opportunity<i class="fas fa-plus-square right"></i></button>
+            </div>
+        </div>
         </form>
     </div>
 

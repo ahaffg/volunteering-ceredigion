@@ -101,10 +101,25 @@ def logout():
 def home():
     return render_template("home.html")
 
-@app.route("/add_opportunity")
+@app.route("/add_opportunity", methods=["GET", "POST"])
 def add_opportunity():
+    if request.method == "POST":
+        welsh_needed = "on" if request.form.get("welsh_needed") else "off"
+        task = {
+            "category_type": request.form.get("category_type"),
+            "title": request.form.get("title"),
+            "institution": request.form.get("institution"),
+            "description": request.form.get("description"),
+            "welsh_needed": welsh_needed,
+            "application_due": request.form.get("application_due")
+        }
+        mongo.db.tasks.insert_one(opportunity)
+        flash("Opportunity Successfully Added")
+        return redirect(url_for("get_opportunities"))
+
     category = mongo.db.categories.find().sort("category", 1)
     return render_template("add_opportunity.html", category=category)
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
