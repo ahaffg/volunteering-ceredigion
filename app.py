@@ -103,8 +103,8 @@ def home():
 
 @app.route("/add_opportunity")
 def add_opportunity():
-    return render_template("add_opportunity.html")
-
+    category = mongo.db.categories.find().sort("category", 1)
+    return render_template("add_opportunity.html", category=category)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
