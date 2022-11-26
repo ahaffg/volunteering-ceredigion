@@ -19,7 +19,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
 @app.route("/")
 @app.route("/get_opportunities")
 def get_opportunities():
@@ -98,10 +97,13 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
+@app.route("/home")
+def home():
+    return render_template("home.html")
 
-@app.route("/add_task")
-def add_task():
-    return render_template("add_task.html")
+@app.route("/add_opportunity")
+def add_opportunity():
+    return render_template("add_opportunity.html")
 
 
 if __name__ == "__main__":
