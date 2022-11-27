@@ -105,7 +105,7 @@ def home():
 def add_opportunity():
     if request.method == "POST":
         welsh_needed = "on" if request.form.get("welsh_needed") else "off"
-        task = {
+        opportunity = {
             "category_type": request.form.get("category_type"),
             "title": request.form.get("title"),
             "institution": request.form.get("institution"),
