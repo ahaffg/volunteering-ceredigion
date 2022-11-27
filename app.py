@@ -119,8 +119,15 @@ def add_opportunity():
 
     category = mongo.db.categories.find().sort("category", 1)
     return render_template("add_opportunity.html", category=category)
-    
 
+
+@app.route("/edit_opportunity/<opportunity_id>", methods=["GET", "POST"])
+def edit_opportunity(opportunity_id):
+    opportunity = mongo.db.opportunities.find_one({"_id": ObjectId(opportunity_id)})
+    categories = mongo.db.category.find().sort("category", 1)
+    return render_template("edit_opportunity.html", opportunity=opportunity, categories=categories)
+
+ 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

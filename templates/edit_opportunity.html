@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="light-blue-text text-darken-4 center-align">Edit Opportunity</h3>
+    <!-- catagory selector -->
+    <div class="row card-panel grey lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('edit_opportunity', opportunity_id=opportunity._id) }}">
+            <div class="row">
+				<div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+					<select id="category" name="category" class="validate" required>
+                        <option value="" disabled selected>Choose Category</option>
+                        {% for category in category
+                            %}
+                            <option value="{{ category.category
+                            }}">{{ category.category }}</option>
+                        {% endfor %}
+                    </select>
+					<label for="category_name">Opportunity Category</label>
+				</div>
+			</div>
+            <!-- opportunity title input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="task_name" name="task_name" minlength="5" maxlength="50"
+                        type="text" class="validate" required>
+                    <label for="task_name">Opportunity Name</label>
+                </div>
+            </div>
+            <!-- opportunity institution input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-heart prefix light-blue-text text-darken-4"></i>
+                    <input id="institution" name="institution" minlength="5" maxlength="100"
+                        type="text" class="validate" required>
+                    <label for="institution">Institution</label>
+                </div>
+            </div>
+            <!-- opportunity description text area -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                    <textarea id="description" name="description" minlength="5"
+                        maxlength="500" class="materialize-textarea validate" required></textarea>
+                    <label for="description">Opportunity Description</label>
+                </div>
+            </div>
+             <!-- is Welsh essential toggle? -->
+			<div class="row">
+				<div class="input-field col s12">
+					<div class="switch">
+                        <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
+						<label for="welsh_needed">
+                            <input type="checkbox" id="welsh_needed" name="welsh_needed">
+                            <span class="lever"></span>
+                            Are Welsh communication skills essential?
+                        </label>
+					</div>
+				</div>
+			</div>
+            <!-- application due date, date picker -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="application_due" name="application_due" type="text" class="datepicker validate" required>
+                    <label for="application_due">Application due date</label>
+                </div>
+            </div>
+           
+         <!-- submit button -->
+         <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                Edit Opportunity<i class="fas fa-plus-edit right"></i></button>
+            </div>
+        </div>
+        </form>
+    </div>
+
+{% endblock %}
