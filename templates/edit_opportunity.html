@@ -18,7 +18,7 @@
                         {% endif %}
                     {% endfor %}
                     </select>
-					<label for="category_type">Opportunity Category</label>
+					<label for="category_type">Opportunity category</label>
 				</div>
 			</div>
             <!-- opportunity title input -->
@@ -26,8 +26,8 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
                     <input id="title" name="title" minlength="5" maxlength="50"
-                    value="{{ opportunity.title }}" type="text" class="validate" required>
-                    <label for="title">Opportunity Name</label>
+                    value="{{ opportunitity.title }}" type="text" class="validate" required>
+                    <label for="title">Opportunity title</label>
                 </div>
             </div>
             <!-- opportunity institution input -->
@@ -35,7 +35,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-heart prefix light-blue-text text-darken-4"></i>
                     <input id="institution" name="institution" minlength="5" maxlength="100"
-                        type="text" class="validate" required>
+                    value="{{ opportunity.institution }}" type="text" class="validate" required>
                     <label for="institution">Institution</label>
                 </div>
             </div>
@@ -44,8 +44,10 @@
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
                     <textarea id="description" name="description" minlength="5"
-                        maxlength="500" class="materialize-textarea validate" required></textarea>
-                    <label for="description">Opportunity Description</label>
+                        maxlength="500" class="materialize-textarea validate" required>
+                    {{- opportunity.description -}}
+                    </textarea>
+                    <label for="description">Opportunity description</label>
                 </div>
             </div>
              <!-- is Welsh essential toggle? -->
@@ -54,8 +56,12 @@
 					<div class="switch">
                         <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
 						<label for="welsh_needed">
+                            {% if opportunity.welsh_needed == "on" %}
+                            <input type="checkbox" id="welsh_needed" name="welsh_needed" checked>
+                        {% else %}
                             <input type="checkbox" id="welsh_needed" name="welsh_needed">
-                            <span class="lever"></span>
+                        {% endif %}
+                        <span class="lever"></span>
                             Are Welsh communication skills essential?
                         </label>
 					</div>
@@ -65,7 +71,9 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="application_due" name="application_due" type="text" class="datepicker validate" required>
+                    <input id="application_due" name="application_due" type="text" 
+                    value="{{ opportunity.application_due }}" 
+                    class="datepicker validate" required>
                     <label for="application_due">Application due date</label>
                 </div>
             </div>
@@ -73,8 +81,13 @@
          <!-- submit button -->
          <div class="row">
             <div class="col s12 center-align">
+                <!-- cancel button -->
+                <a href="{{ url_for('get_opportunities') }}" class="btn-large red text-shadow">
+                    Cancel <i class="fas fa-times-circle right"></i>
+                </a>
                 <button type="submit" class="btn-large light-blue darken-1 text-shadow">
-                Edit Opportunity<i class="fas fa-plus-edit right"></i></button>
+                    Edit opportunitity <i class="fas fa-edit right"></i>
+                </button>
             </div>
         </div>
         </form>

@@ -127,7 +127,7 @@ def edit_opportunity(opportunity_id):
     categories = mongo.db.category.find().sort("category", 1)
     return render_template("edit_opportunity.html", opportunity=opportunity, categories=categories)
 
- 
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
