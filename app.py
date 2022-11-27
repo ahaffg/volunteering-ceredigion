@@ -117,8 +117,8 @@ def add_opportunity():
         flash("Opportunity Successfully Added")
         return redirect(url_for("get_opportunities"))
 
-    category = mongo.db.categories.find().sort("category", 1)
-    return render_template("add_opportunity.html", category=category)
+    category = mongo.db.category.find().sort("category", 1)
+    return render_template("add_opportunity.html", categories=categories)
 
 
 @app.route("/edit_opportunity/<opportunity_id>", methods=["GET", "POST"])

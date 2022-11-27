@@ -9,23 +9,25 @@
 				<div class="input-field col s12">
                     <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
 					<select id="category" name="category" class="validate" required>
-                        <option value="" disabled selected>Choose Category</option>
-                        {% for category in category
-                            %}
-                            <option value="{{ category.category
-                            }}">{{ category.category }}</option>
-                        {% endfor %}
+                        <option value="" selected>Choose Category</option>
+                        {% for category in categories %}
+                        {% if category.category_type == opportunity.category_type %}
+                            <option value="{{ category.category_type }}" selected>{{ category.category_type }}</option>
+                        {% else %}
+                            <option value="{{ category.category_type }}">{{ category.category_type }}</option>
+                        {% endif %}
+                    {% endfor %}
                     </select>
-					<label for="category_name">Opportunity Category</label>
+					<label for="category_type">Opportunity Category</label>
 				</div>
 			</div>
             <!-- opportunity title input -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="task_name" name="task_name" minlength="5" maxlength="50"
-                        type="text" class="validate" required>
-                    <label for="task_name">Opportunity Name</label>
+                    <input id="title" name="title" minlength="5" maxlength="50"
+                    value="{{ opportunity.title }}" type="text" class="validate" required>
+                    <label for="title">Opportunity Name</label>
                 </div>
             </div>
             <!-- opportunity institution input -->
