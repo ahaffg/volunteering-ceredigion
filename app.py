@@ -123,9 +123,22 @@ def add_opportunity():
 
 @app.route("/edit_opportunity/<opportunity_id>", methods=["GET", "POST"])
 def edit_opportunity(opportunity_id):
-    opportunity = mongo.db.opportunities.find_one({"_id": ObjectId(opportunity_id)})
-    categories = mongo.db.category.find().sort("category", 1)
-    return render_template("edit_opportunity.html", opportunity=opportunity, categories=categories)
+     if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        submit = {
+            "category_type": request.form.get("category_type"),
+            "title": request.form.get("title"),
+            "institution": request.form.get("institution"),
+            "description": request.form.get("description"),
+            "welsh_needed": welsh_needed,
+            "application_due": request.form.get("application_due")
+        }
+        mongo.db.opportunities.update({"_id": ObjectId(opportunity_id)}, submit)
+        flash("Opportunity Successfully Updated")
+    
+        opportunity = mongo.db.opportunities.find_one({"_id": ObjectId(opportunity_id)})
+        categories = mongo.db.categories.find().sort("category", 1)
+        return render_template("edit_opportunity.html", opportunity=opportunity, categories=categories)
 
 
 if __name__ == "__main__":
